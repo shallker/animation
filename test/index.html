@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/build/build.js"></script>
+  </head>
+  <body>
+    <div id="div" style="width: 50px; height: 50px; background-color: green;"></div>
+
+    <script>
+      var Animation = require('animation');
+      var div = document.getElementById('div');
+
+      Animation.animate(div, {
+        marginTop: '20%',
+        opacity: 0.2,
+        marginLeft: '100px'
+      }, 3000);
+
+      new Animation({
+        el: div,
+        transforms: {width: '500px'},
+        duration: 3000
+      });
+    </script>
+  </body>
+</html>
